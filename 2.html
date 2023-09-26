@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5 задание - Поле чудес</title>
+	<style type="text/css">
+		/* Главный див */
+		.container {
+			width: 600px;
+		}
+		/* класс для правильной буквы 1 */
+		.letter1 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 2 */
+		.letter2 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 3 */
+		.letter3 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 4 */
+		.letter4 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 5 */
+		.letter5 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* класс для правильной буквы 6 */
+		.letter6 {
+			background: black;
+			border: 1px solid #dee2e6;
+			height: 100px;
+			width: 100px;
+		}
+		/* авт. отступы */
+		.mx-auto {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* DISPLAY FLEX */
+		.d-flex {
+			display: flex;
+		}
+		/* ШРИФТ Arial */
+		.ff-arial {
+			font-family: Arial;
+		}
+		/* фон светло-серый, почти белый */
+		.bg-light {
+			background-color: #f8f9fa;
+		}
+		/* фон желтый */
+		.bg-warning {
+			background-color: #ffc107;
+		}
+		/* ведущий Якубович */
+		.yakubovich {
+			background-image: url(1.png);
+			background-size: 100% 100%;
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			left: 0px;
+			top: 400px;
+		}
+	</style>
+</head>
+<body class="ff-arial">
+	<!-- Вопрос -->
+	<div class="bg-warning container mx-auto">
+		Этот струнный инструмент используют во многих стилях и направлениях музыки. Значительный вклад в музыкальную индустрию этот инструмент внес к середине 20 века.
+	</div>
+	<!-- Главный див -->
+	<div class="container mx-auto d-flex bg-light">
+		<div class="letter1">
+			<h1>Г</h1>
+		</div>
+		<div class="letter2">
+			<h1>И</h1>
+		</div>
+		<div class="letter3">
+			<h1>Т</h1>
+		</div>
+		<div class="letter4">
+			<h1>А</h1>
+		</div>
+		<div class="letter5">
+			<h1>Р</h1>
+		</div>
+		<div class="letter6">
+			<h1>А</h1>
+		</div>
+	</div>
+	<!-- Добавьте классы для букв сами -->
+	<span class="a">A</span>
+	<span class="ffy1">Б</span>
+	<span class="ffy2">В</span>
+	<span class="g">Г</span>
+	<span class="ffy3">Д</span>		
+	<span class="ffy4">Е</span>	
+	<span class="ffy5">Ё</span>
+	<span class="ffy6">Ж</span>
+	<span class="ffy7">З</span>
+	<span class="i">И</span>
+	<span class="ffy8">Й</span>
+	<span class="ffy9">К</span>
+	<span class="ffy10">Л</span>
+	<span class="ffy11">М</span>
+	<span class="ffy12">Н</span>
+	<span class="ffy13">О</span>
+	<span class="ffy14">П</span>
+	<span class="r">Р</span>
+	<span class="ffy15">С</span>
+	<span class="t">Т</span>
+	<span class="ffy16">У</span>
+	<span class="ffy17">Ф</span>
+	<span class="ffy18">Х</span>
+	<span class="ffy19">Ц</span>
+	<span class="ffy20">Ч</span>
+	<span class="ffy21">Ш</span>
+	<span class="ffy22">Щ</span>
+	<span class="ffy23">Ъ</span>
+	<span class="ffy24">Ы</span>
+	<span class="ffy25">Ь</span>
+	<span class="ffy26">Э</span>
+	<span class="ffy27">Ю</span>
+	<span class="ffy28">Я</span>
+	<!-- ведущий -->
+	<div class="yakubovich">
+	</div>
+	<script type="text/javascript">
+		/* Создай игру "Поле чудес".
+		1. Когда кликаешь на правильную букву алфавита, то открывается буква в слове.
+		2. Когда кликаешь на неправильную букву алфавита, то выходит всплывающее окно 'Неверно!'.
+		Вначале сделай, так чтобы работали клики на правильные буквы. Потом сделай, так чтобы работали клики на 1-2 неправильные буквы. На все 33 буквы алфавита, можно не делать. */
+		let gaga = "yellow"
+		let g_element = document.querySelector(".g")
+		let i_element = document.querySelector(".i")
+		let t_element = document.querySelector(".t")
+		let a_element = document.querySelector(".a")
+		let r_element = document.querySelector(".r")
+
+		let ff1_element = document.querySelector(".ffy1")
+		let ff2_element = document.querySelector(".ffy2")
+		let ff3_element = document.querySelector(".ffy3")
+		let ff4_element = document.querySelector(".ffy4")
+		let ff5_element = document.querySelector(".ffy5")
+		let ff6_element = document.querySelector(".ffy6")
+		let ff7_element = document.querySelector(".ffy7")
+		let ff8_element = document.querySelector(".ffy8")
+		let ff9_element = document.querySelector(".ffy9")
+		let ff10_element = document.querySelector(".ffy10")
+		let ff11_element = document.querySelector(".ffy11")
+		let ff12_element = document.querySelector(".ffy12")
+		let ff13_element = document.querySelector(".ffy13")
+		let ff14_element = document.querySelector(".ffy14")
+		let ff15_element = document.querySelector(".ffy15")
+		let ff16_element = document.querySelector(".ffy16")
+		let ff17_element = document.querySelector(".ffy17")
+		let ff18_element = document.querySelector(".ffy18")
+		let ff19_element = document.querySelector(".ffy19")
+		let ff20_element = document.querySelector(".ffy20")
+		let ff21_element = document.querySelector(".ffy21")
+		let ff22_element = document.querySelector(".ffy22")
+		let ff23_element = document.querySelector(".ffy23")
+		let ff24_element = document.querySelector(".ffy24")
+		let ff25_element = document.querySelector(".ffy25")
+		let ff26_element = document.querySelector(".ffy26")
+		let ff27_element = document.querySelector(".ffy27")
+		let ff28_element = document.querySelector(".ffy28")
+		
+		let ge_element = document.querySelector(".letter1")
+		let ii_element = document.querySelector(".letter2")
+		let tt_element = document.querySelector(".letter3")
+		let aa_element = document.querySelector(".letter4")
+		let rr_element = document.querySelector(".letter5")
+		let hh_element = document.querySelector(".letter6")
+
+
+		g_element.onclick = function() {
+			ge_element.style.background = gaga
+			}	
+		i_element.onclick = function() {
+			ii_element.style.background = gaga
+			}	
+		t_element.onclick = function() {
+			tt_element.style.background = gaga
+			}	
+		r_element.onclick = function() {
+			rr_element.style.background = gaga
+			}	
+		a_element.onclick = function() {
+			hh_element.style.background = gaga
+			aa_element.style.background = gaga			
+		}	
+
+
+
+		ff1_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff2_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff3_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff4_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff5_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff6_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff7_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff8_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff9_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff10_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff11_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff12_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff13_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff14_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff15_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff16_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff17_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff18_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff19_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff20_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff21_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff22_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff23_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff24_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff25_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff26_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff27_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		ff28_element.onclick = function() {
+			alert("неправильно!!")
+		}
+		
+		
+
+
+
+		
+	</script>
+</body>
+</html>
